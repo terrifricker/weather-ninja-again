@@ -10,6 +10,31 @@
         <link rel="stylesheet" href="styles.css">
     </head>
     <body>
+        <header>
+            <h1>Ninja Weather Again!</h1>
+            <form>
+                <label for="city">Enter a location for weather information</label>
+                <input type="text" name="city">            
+            </form>
+        </header>
+        <main>
+            <div class="weather-image-icon">
+                <img src="https://via.placeholder.com/400x300">
+                <div class="icon">
+                    <!-- icon -->
+                </div>
+            </div>
+            <div class="details">
+                <div class="city-name">City Name</div>
+                <div class="weather-condition">Weather Condition</div>
+                <div class="temperature">
+                    <span class="current-temperature"></span>
+                    <span>&deg;</span>
+                </div>
+            </div>
+        </main>
 
+        <script src="scripts/app.js"></script>
+        <script src="scripts/forecast.js"></script>
     </body>
 </html>

@@ -5,6 +5,7 @@ body {
     width: 100vw;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 16pt;
+    background-color: #eeedec;
 }
 
 header {
@@ -40,8 +41,19 @@ main {
     text-align: center;
     box-shadow: 3pt 4pt 8pt silver;
 }
+
+.details {
+    text-transform: uppercase;
 }
 
 .city-name {
-    text-transform: uppercase;
+    font-size: 1.7rem;
+}
+
+.weather-condition {
+    font-size: 1rem;
+}
+
+.temperature {
+    font-size: 3rem;
 }

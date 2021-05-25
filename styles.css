@@ -15,14 +15,12 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center;
-    border: 2pt solid black;
 }
 
 form {
     display: flex;
     flex-direction: column;
     align-items: center;
-    border: 1pt solid black;
 }
 
 input {
@@ -31,7 +29,6 @@ input {
     font-size: 1.5rem;
     line-height: 1.5em;
     margin: 1vw;
-    border: 1pt solid salmon;
 }
 
 main {

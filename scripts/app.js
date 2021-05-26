@@ -27,6 +27,8 @@ cityForm.addEventListener('submit', (e)=> {
 
     // add city to detail div on screen
     
-    updateCity(city);
+    updateCity(city)
+        .then(data => console.log(data))
+        .catch(err => console.log(err));
 
 })

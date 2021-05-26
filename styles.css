@@ -42,6 +42,11 @@ input {
     box-shadow: 3pt 4pt 8pt silver;
 }
 
+.time img {
+    width: 400px;
+    object-fit: contain;
+}
+
 .details {
     text-transform: uppercase;
 }

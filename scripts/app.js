@@ -5,8 +5,12 @@ const details = document.querySelector(".details");
 
 const updateUI = ( (data) => {
 
-    const cityDetails = data.cityDetails;
-    const weatherDetails = data.weatherDetails;
+    //const cityDetails = data.cityDetails;
+    //const weatherDetails = data.weatherDetails;
+
+    // Use javascript Destructuring instead
+    const {cityDetails, weatherDetails} = data;
+
     details.innerHTML = `
     <div class="city-name">${cityDetails.EnglishName}</div>
     <div class="weather-condition">${weatherDetails.WeatherText}</div>
@@ -14,7 +18,6 @@ const updateUI = ( (data) => {
         <span class="${weatherDetails.Temperature.Imperial.Value}"></span>
         <span>&deg; F</span>
     </div>`;
-    console.log(data.weatherDetails.Temperature);
 })
 
 const updateCity =  async (city) => {

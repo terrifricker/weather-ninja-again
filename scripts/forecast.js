@@ -1,7 +1,6 @@
 const key = 'SIOTsEz9ysEBcldZ8iAw1eHDwA4F3iAg';
 
 
-
 //get weather
 const getWeather = async (id) => {
 
@@ -26,8 +25,3 @@ const getCity = async (city) => {
     return data[0];
 }
 
-getCity('malibu').then(data => {
-    return getWeather(data.Key);
-    }).then(data => {
-        console.log(data);
-    }).catch(err => { console.log(err); })

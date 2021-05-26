@@ -2,7 +2,19 @@
 const cityForm = document.querySelector('form');
 
 const updateCity =  async (city) => {
-    console.log(city);
+
+    const cityDetails = await getCity(city)
+    const weatherDetails = await getWeather(cityDetails.Key);
+
+    /* using object shorthand notation, because
+    the property and value are exactly the same,
+    the commented code becomes the new return item.
+    return {
+        cityDetails: cityDetails,
+        weatherDetails: weatherDetails
+    }
+    */
+    return {cityDetails, weatherDetails};
 }
 
 

@@ -32,7 +32,7 @@ input {
     margin: 1vw;
 }
 
-main {
+.card {
     width: 400px;
     margin: 1vw auto;
     display: flex;

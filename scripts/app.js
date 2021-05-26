@@ -1,5 +1,21 @@
-// grab form
 const cityForm = document.querySelector('form');
+const card = document.querySelector("main");
+const details = document.querySelector(".details");
+
+
+const updateUI = ( (data) => {
+
+    const cityDetails = data.cityDetails;
+    const weatherDetails = data.weatherDetails;
+    details.innerHTML = `
+    <div class="city-name">${cityDetails.EnglishName}</div>
+    <div class="weather-condition">${weatherDetails.WeatherText}</div>
+    <div class="temperature">
+        <span class="${weatherDetails.Temperature.Imperial.Value}"></span>
+        <span>&deg; F</span>
+    </div>`;
+    console.log(data.weatherDetails.Temperature);
+})
 
 const updateCity =  async (city) => {
 
@@ -28,7 +44,7 @@ cityForm.addEventListener('submit', (e)=> {
     // add city to detail div on screen
     
     updateCity(city)
-        .then(data => console.log(data))
+        .then(data => updateUI(data))
         .catch(err => console.log(err));
 
 })

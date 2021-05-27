@@ -2,7 +2,7 @@ const cityForm = document.querySelector('form');
 const card = document.querySelector(".card");
 const details = document.querySelector(".details");
 const time = document.querySelector(".time img");
-const icon = document.queryCommandEnabled(".icon");
+const icon = document.querySelector(".icon img");
 
 
 const updateUI = ( (data) => {
@@ -36,6 +36,9 @@ const updateUI = ( (data) => {
     time.setAttribute("src", timeSrc);
     time.setAttribute("alt", timeAlt);
 
+    // update icon
+    const iconSrc =  `images/icons/${weatherDetails.WeatherIcon}.svg`;
+    icon.setAttribute("src", iconSrc);
 
     // show card
     if(card.classList.contains("hidden")) {

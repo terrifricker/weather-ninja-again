@@ -23,13 +23,19 @@ const updateUI = ( (data) => {
         <span>&deg; F</span>
     </div>`;
 
-    // update image and icon
+    // update image
     let timeSrc = null;
+    let timeAlt = null;
     if(weatherDetails.IsDayTime) {
-        timeSrc = 'images/day.svg'
+        timeSrc = 'images/day.svg';
+        timeAlt = "An image with light blue sky and a few clouds to indicate that it is daytime.";
     } else {
-        timeSrc = 'images/night.svg'
+        timeSrc = 'images/night.svg';
+        timeAlt = "An image with a navy sky, stars, a crescent moon, and a few dark clouds to indicate that it is nighttime.";
     }
+    time.setAttribute("src", timeSrc);
+    time.setAttribute("alt", timeAlt);
+
 
     // show card
     if(card.classList.contains("hidden")) {

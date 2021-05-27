@@ -30,7 +30,11 @@ const updateUI = ( (data) => {
     } else {
         timeSrc = 'images/night.svg'
     }
-    time.setAttribute("src", timeSrc)
+
+    // show card
+    if(card.classList.contains("hidden")) {
+        card.classList.remove("hidden");
+    }
 })
 
 const updateCity =  async (city) => {

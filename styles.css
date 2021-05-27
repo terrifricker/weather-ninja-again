@@ -41,6 +41,9 @@ input {
     text-align: center;
     box-shadow: 3pt 4pt 8pt silver;
 }
+.hidden {
+    display: none;
+}
 
 .time img {
     width: 400px;
